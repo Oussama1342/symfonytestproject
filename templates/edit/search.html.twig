@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<select>
+ 
+    {% for c in arts %}
+ 
+     
+
+    
+    <option value=" {{ c.category }}" selected >  {{ c.category }}   </option> 
+     
+    {% endfor %}
+
+</select>
+
+<table class="table" >
+    <thead >
+            <tr>
+            <th scope="col">Libele</th>
+            <th scope="col">Reference</th>
+            <th scope="col">categorie</th>
+            <th scope="col">prix_unit</th>
+            <th scope="col">TVA</th>
+            <th scope="col">marge</th>
+            <th scope="col">prix_TTC</th>
+            <th scope="col">quantite_disp</th>
+            <th scope="col">Code_Bar</th>
+            <th ></th>
+            <th ></th>
+            </tr>
+        </thead>
+        <tbody>
+{% for p in articles %}
+            <tr>
+            <td>{{ p.Libele }}</td>
+            <td>{{ p.reference }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.prixunitaire }}</td>
+            <td>{{ p.TVA }}</td>
+            <td>{{ p.marge }}</td>
+            <td>{{ p.prixTTC }}</td>
+            <td>{{ p.quantitedisponibl }}</td>
+            <td>{{ p.codbar }}</td>
+        
+           </tr>
+         
+{% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

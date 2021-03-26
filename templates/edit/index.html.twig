@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="container center">
+       
+        <h1 style="text-align:center">Update Data</h1>
+        {{ form_start(form_user) }}
+
+        
+
+                <div class="form-group">
+               <b> {{ form_label(form_user.username)}}</b>
+                {{ form_widget(form_user.username,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_user.username) }}</span>
+       
+               <b>{{ form_label(form_user.email)}}</b>
+                {{ form_widget(form_user.email,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_user.email) }}</span>
+       
+           <b>    <label>Password</label> </b>
+                {{ form_widget(form_user.plainPassword,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_user.plainPassword) }}</span>
+         
+                      <b>    <label>Confirmez votre mot de passe</label> </b>
+                {{ form_widget(form_user.confirm_password,{'attr': {'class': 'form-control'}}) }}
+           
+                     <label></label>
+                <input type="submit" name="" style="margin:auto;display:block" class="btn btn-primary" value="Update">
+          </div>
+        {{ form_end(form_user) }}
+
+    </div>
+
+{% endblock %}

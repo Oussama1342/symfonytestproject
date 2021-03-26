@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MonprofilController!{% endblock %}
+
+{%block body%}
+<table>
+    <thead></thead>
+    <tr>
+ <td>{{app.user.username}}</td>
+        <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
+        <td><a href="edit">Edit</a></td>
+  
+    </tr>
+    <tr>
+      <td>{{app.user.email}}  </td>
+                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
+
+    <td><a href="edit">Edit</a></td>
+
+        </tr>
+    </table>
+
+{% endblock %}

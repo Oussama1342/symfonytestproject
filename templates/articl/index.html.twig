@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlController!{% endblock %}
+
+{% block body %}
+ <div class="container center">
+       
+        <h1 style="text-align:center">Ajout Produit</h1>
+        {{ form_start(articlForm) }}
+
+        
+
+                <div class="form-group">
+               <b> {{ form_label(articlForm.libele)}}</b>
+                {{ form_widget(articlForm.libele,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.libele) }}</span>
+       
+               <b>{{ form_label(articlForm.reference)}}</b>
+                {{ form_widget(articlForm.reference,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.reference) }}</span>
+               
+               <b>{{ form_label(articlForm.categorie)}}</b>
+                {{ form_widget(articlForm.categorie,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.categorie) }}</span>
+       
+                  
+               <b>{{ form_label(articlForm.prix_unitaire)}}</b>
+                {{ form_widget(articlForm.prix_unitaire,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.prix_unitaire) }}</span>
+        
+                          
+               <b>{{ form_label(articlForm.TVA)}}</b>
+                {{ form_widget(articlForm.TVA,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.TVA) }}</span>
+       
+               <b>{{ form_label(articlForm.marge)}}</b>
+                {{ form_widget(articlForm.marge,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.marge) }}</span>
+       
+               <b>{{ form_label(articlForm.prix_TTC)}}</b>
+                {{ form_widget(articlForm.prix_TTC,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.prix_TTC) }}</span>
+       
+               <b>{{ form_label(articlForm.quantite_disponibl)}}</b>
+                {{ form_widget(articlForm.quantite_disponibl,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.quantite_disponibl) }}</span>
+       
+               <b>{{ form_label(articlForm.cod_bar)}}</b>
+                {{ form_widget(articlForm.cod_bar,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(articlForm.cod_bar) }}</span>
+       
+                     <label></label>
+                <input type="submit" name="" style="margin:auto;display:block" class="btn btn-primary" value="Ajouter">
+          </div>
+        {{ form_end(articlForm) }}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="container center">
+       
+        <h1 style="text-align:center">Update Data</h1>
+        {{ form_start(form_product) }}
+
+        
+
+                <div class="form-group">
+               <b> {{ form_label(form_product.libele)}}</b>
+                {{ form_widget(form_product.libele,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.libele) }}</span>
+       
+               <b>{{ form_label(form_product.reference)}}</b>
+                {{ form_widget(form_product.reference,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.reference) }}</span>
+       
+               <b>{{ form_label(form_product.categorie)}}</b>
+                {{ form_widget(form_product.categorie,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.categorie) }}</span>
+         
+                  <b>{{ form_label(form_product.prixunitaire)}}</b>
+                {{ form_widget(form_product.prixunitaire,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.prixunitaire) }}</span>
+         
+                    <b>{{ form_label(form_product.TVA)}}</b>
+                {{ form_widget(form_product.TVA,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.TVA) }}</span>
+        
+                    <b>{{ form_label(form_product.marge)}}</b>
+                {{ form_widget(form_product.marge,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.marge) }}</span>
+       
+                    <b>{{ form_label(form_product.prixTTC)}}</b>
+                {{ form_widget(form_product.prixTTC,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.prixTTC) }}</span>
+         
+                         <b>{{ form_label(form_product.quantitedisponibl)}}</b>
+                {{ form_widget(form_product.quantitedisponibl,{'attr': {'class': 'form-control'}}) }}
+                <span class="error">{{ form_errors(form_product.quantitedisponibl) }}</span>
+                    
+                         <b>{{ form_label(form_product.codbar)}}</b>
+                {{ form_widget(form_product.codbar,{'attr': {'class': 'form-control'}}) }}
+               <span class="error">{{ form_errors(form_product.codbar) }}</span>
+
+                    <label></label>
+                <input type="submit" name="" style="margin:auto;display:block" class="btn btn-primary" value="Update">
+          </div>
+        {{ form_end(form_product) }}
+
+    </div>
+
+{% endblock %}
